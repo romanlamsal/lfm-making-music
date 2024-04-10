@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon/components"
+
+interface Props {
+    type: string
+}
+
+const { type } = Astro.props
+
+let icon = (() => {
+    switch (type) {
+        case "bass":
+            return "game-icons:guitar-bass-head"
+        case "guitar":
+            return "game-icons:guitar"
+        case "vocals":
+            return "game-icons:microphone"
+        default:
+            return "game-icons:bowie-knife"
+    }
+})()
+---
+
+<li class="bg-primary-dark inline-block rounded-full px-4 py-1 text-2xl text-white">
+    <Icon name={icon} class="inline" />
+    <span class="font-semibold">{type.charAt(0).toUpperCase() + type.slice(1, type.length)}</span>
+</li>
