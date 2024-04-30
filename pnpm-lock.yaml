@@ -20,6 +20,9 @@ dependencies:
   '@iconify-json/gg':
     specifier: ^1.1.9
     version: 1.1.9
+  '@iconify-json/mdi':
+    specifier: ^1.1.66
+    version: 1.1.66
   astro:
     specifier: ^4.5.17
     version: 4.5.17(typescript@5.4.4)
@@ -926,6 +929,12 @@ packages:
 
   /@iconify-json/gg@1.1.9:
     resolution: {integrity: sha512-gj4XlLoYR645g4WWMzv2+E5EBIbqnyOLlKL+9MPjb05fSDqYb6BRG2ICn68hIWOtcMS/UPNJQ5M8/Y2FgWD72g==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify-json/mdi@1.1.66:
+    resolution: {integrity: sha512-7KPF2RVUUWav/hXCM8Ti/smqu3cmgePJpiX9CSkldiL+80+eBRBeKlc4vPOc9jhAItlqIU1vKsbKoPP0JIfgbg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
