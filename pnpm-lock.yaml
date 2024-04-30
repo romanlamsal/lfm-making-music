@@ -11,13 +11,13 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^5.1.0
     version: 5.1.0(astro@4.5.17)(tailwindcss@3.4.3)
-  '@fontsource-variable/jetbrains-mono':
+  '@fontsource/jockey-one':
     specifier: ^5.0.20
     version: 5.0.20
-  '@fontsource/nunito':
-    specifier: ^5.0.17
-    version: 5.0.17
   '@iconify-json/game-icons':
+    specifier: ^1.1.9
+    version: 1.1.9
+  '@iconify-json/gg':
     specifier: ^1.1.9
     version: 1.1.9
   astro:
@@ -895,12 +895,8 @@ packages:
       - supports-color
     dev: true
 
-  /@fontsource-variable/jetbrains-mono@5.0.20:
-    resolution: {integrity: sha512-IWJnmY9vT5Olcac1vzA7FMdnojCrZWMq+g7SqC2jsFpY0LQTjIgp9gBjjw9kUOkNbLw37/evZO4w6rdPeMA68A==}
-    dev: false
-
-  /@fontsource/nunito@5.0.17:
-    resolution: {integrity: sha512-1O8tFQImUR66MUZ8UGHmN1dveFzLXJhrGKBH7us2zXYe6juk0fPcV0uVvJEIyW8BsevEZMuExZhpGFiTy/g61Q==}
+  /@fontsource/jockey-one@5.0.20:
+    resolution: {integrity: sha512-dgjznk2d5vGLx1DWxMbOdp7HyjA2M/FS97TE32KSBS8RW3n0nUTMZsFk9f3OaS+jBEs7ef56glrLb6ntxG8Sbg==}
     dev: false
 
   /@humanwhocodes/config-array@0.10.7:
@@ -924,6 +920,12 @@ packages:
 
   /@iconify-json/game-icons@1.1.9:
     resolution: {integrity: sha512-DipxbRFPK+KgDekVGx5if3mlxzKvTNM74yF5y9LIU8FPNShND9JnaDGCz5cfyaGVQxj7BITztO5v042hRFsahg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
+  /@iconify-json/gg@1.1.9:
+    resolution: {integrity: sha512-gj4XlLoYR645g4WWMzv2+E5EBIbqnyOLlKL+9MPjb05fSDqYb6BRG2ICn68hIWOtcMS/UPNJQ5M8/Y2FgWD72g==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false

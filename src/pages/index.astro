@@ -1,47 +1,108 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import { $personData } from "../lib/personDataApi"
+import TextSection from "../components/TextSection.astro"
 import InstrumentBadge from "../components/InstrumentBadge.astro"
+import { Icon } from "astro-icon/components"
 
 const personData = await $personData
 ---
 
-<Layout title="Roman makes music">
-    <main class="mx-auto max-w-screen-lg space-y-16 px-4 md:mt-16">
-        <section
-            class:list={[
-                "flex flex-col-reverse items-center justify-between py-4 text-center md:flex-row  md:text-left",
-                "relative",
-            ]}
-        >
-            <div
-                class:list={[
-                    "absolute bottom-0 left-[-2rem] right-[-1rem] top-0 z-[-1]",
-                    "to-astro backdrop-blur-10 bg-gradient-to-r from-blue-300/90 blur-lg",
-                    "rounded-[5rem] border",
-                ]}
-            >
-            </div>
-            <header class="text-primary">
-                <h1>{personData.name}</h1>
+<Layout title="Roman makes music" />
+<section class="mx-auto flex h-full min-h-screen w-full flex-col bg-primary">
+    <header class="bg-primary-dark px-6 py-8">
+        <div class="mx-auto flex w-full max-w-screen-md justify-between space-x-4">
+            <div class="flex-nowrap">
+                <h1 class="whitespace-nowrap">Roman Lamsal</h1>
                 <ul class="space-x-4">
-                    {personData.instruments.map(instrument => <InstrumentBadge type={instrument} />)}
+                    <InstrumentBadge type="vocals" />
+                    <InstrumentBadge type="bass" />
                 </ul>
-            </header>
-            <img
-                src={personData.imageUrl}
-                alt={personData.name}
-                class="border-transparend h-48 w-48 rounded-full border"
-            />
-        </section>
-        <section>
-            <h2 class="text-primary">Find me here</h2>
-            <p></p>
-            <ul>
-                <li></li>
-            </ul>
-        </section>
-    </main>
-</Layout>
+            </div>
+            <div>
+                <img src={personData.imageUrl} alt="Roman Lamsal" />
+            </div>
+        </div>
+    </header>
+    <main class="relative space-y-8 bg-gradient-to-b from-primary-dark via-primary to-primary px-4 py-8">
+        <TextSection title="Musiker gesucht">
+            <p>
+                Bis April ‘24 durfte ich für
+                <a href="https://traeson.de" class="underline" target="_blank" rel="noreferrer noopener">
+                    træson
+                    <Icon name="gg:external" class="inline" />
+                </a>{" "}
+                singen, aber für ausgewachsenes Band-Business (aka. rumtouren, aktiv die eigene Fanbase aufbauen etc.) hab
+                ich einfach keine Zeit mehr.
+            </p>
+            <p>
+                Ich will aber trotzdem Musik machen! Deswegen such’ ich Musiker, die Bock hätten hin und wiedermal
+                zusammen im Proberaum (gelegentlich auch auf Bühnen in Hamburg oder näherer Umgebung) bisschen Krach zu
+                machen.
+            </p>
 
+            <p>
+                Mein Plan ist, einen Pool aus Musikern zusammenzutrommeln und sich dann einfach mal in verschiedenen
+                Kombos zum Musizieren zu treffen. Klingt gut? Dann <a
+                    href="mailto:roman+lfm@lamsal.de"
+                    class="underline"
+                >
+                    schreib mir ne Mail!
+                    <Icon name="gg:mail" class="inline" />
+                </a>
+            </p>
+        </TextSection>
+        <TextSection title="Mein Musikgeschmack">
+            <p>Mein Spotify-Wrapped liest sich jedes Jahr wie ein “Best of Nu-Metal 2004”.</p>
+            <p>
+                Zu den üblichen Nu-Metal Vertretern wie Linkin Park, Korn, Limp Bizkit kommen dann noch Grunge Klassiker
+                wie Alice in Chains, Pearl Jam und Silverchair.
+            </p>
+            <p>
+                Ab da ging’s für mich eher härter weiter mit Slipknot, sehr viel Tool, System of A Down, Mudvayne und so
+                weiter.
+            </p>
+        </TextSection>
+        <TextSection title="Hörproben">
+            <p>
+                Ich war mit <a href="https://traeson.de" class="underline" target="_blank" rel="noreferrer noopener">
+                    træson
+                    <Icon name="gg:external" class="inline" />
+                </a>{" "} mehrfach im Studio, hier sind ein paar Ergebnisse.
+            </p>
+            <ul class="mt-4 space-y-4">
+                <li>
+                    <iframe
+                        style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/4pTyhGAM35jiUPq3UUZ06O?utm_source=generator&theme=0"
+                        width="100%"
+                        height="152"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </li>
+                <li>
+                    <iframe
+                        style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/2mKhgoZUkZL9klcoHbToCC?utm_source=generator"
+                        width="100%"
+                        height="152"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </li>
+                <li>
+                    <iframe
+                        style="border-radius:12px"
+                        src="https://open.spotify.com/embed/track/1DdPH7YqbVEAU1OD377x8x?utm_source=generator&theme=0"
+                        width="100%"
+                        height="152"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"></iframe>
+                </li>
+            </ul>
+        </TextSection>
+    </main>
+</section>
 <style></style>

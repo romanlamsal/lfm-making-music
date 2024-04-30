@@ -2,6 +2,6 @@ import { task } from "nanostores"
 
 export const $personData = task(async () => ({
     name: "Roman Lamsal",
-    imageUrl: "/roman-makes-music/1710250811437.jpg",
+    imageUrl: "/roman-makes-music/itsme.jpeg",
     instruments: ["vocals", "bass"],
 }))

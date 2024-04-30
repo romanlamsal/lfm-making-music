@@ -1,5 +1,5 @@
 ---
-import "@fontsource-variable/jetbrains-mono"
+import "@fontsource/jockey-one"
 
 interface Props {
     title: string
@@ -30,9 +30,14 @@ const { title } = Astro.props
         --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
     }
     html {
-        font-family: "JetBrains Mono Variable", system-ui, sans-serif;
+        font-family: "Jockey One", system-ui, sans-serif;
         background: #13151a;
         background-size: 224px;
+
+        @apply text-text text-[20px] md:text-[32px];
+    }
+    body {
+        @apply h-full min-h-screen;
     }
     code {
         font-family:
@@ -46,9 +51,9 @@ const { title } = Astro.props
             monospace;
     }
     h1 {
-        @apply text-[5rem] font-bold;
+        @apply text-highlight text-[2rem];
     }
     h2 {
-        @apply text-[3rem] font-bold;
+        @apply text-highlight text-[1.5rem];
     }
 </style>

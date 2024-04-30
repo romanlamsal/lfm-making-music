@@ -12,9 +12,9 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "@astrojs/tailwind": "^5.1.0",
-    "@fontsource-variable/jetbrains-mono": "^5.0.20",
-    "@fontsource/nunito": "^5.0.17",
+    "@fontsource/jockey-one": "^5.0.20",
     "@iconify-json/game-icons": "^1.1.9",
+    "@iconify-json/gg": "^1.1.9",
     "astro": "^4.5.17",
     "astro-icon": "^1.1.0",
     "nanostores": "^0.10.3",
